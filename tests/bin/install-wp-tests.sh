@@ -17,6 +17,11 @@ WP_VERSION=${5-latest}
 WP_TESTS_DIR=${WP_TESTS_DIR-/tmp/wordpress-tests-lib}
 WP_CORE_DIR=${WP_CORE_DIR-/tmp/wordpress/}
 
+# Ensure trailing slash
+if [[ "${WP_CORE_DIR}" != */ ]]; then
+    WP_CORE_DIR="${WP_CORE_DIR}/"
+fi
+
 download() {
     if [ `which curl` ]; then
         curl -s "$1" > "$2";

@@ -10,7 +10,7 @@
 
 require_once( 'cmb-tests-base.php' );
 
-abstract class Test_CMB2_Rest_Base extends Test_CMB2 {
+abstract class Test_CMB2_Rest_Base extends CMB2TestCase {
 
 	/**
 	 * Set up the test fixture

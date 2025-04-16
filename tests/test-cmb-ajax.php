@@ -13,7 +13,7 @@ require_once( 'cmb-tests-base.php' );
 /**
  * Test the oEmbed functionality
  */
-class Test_CMB2_Ajax extends Test_CMB2 {
+class Test_CMB2_Ajax extends CMB2TestCase {
 
 	/**
 	 * Set up the test fixture

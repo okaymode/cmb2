@@ -13,7 +13,7 @@ require_once( 'cmb-tests-base.php' );
 /**
  * Test the oEmbed functionality
  */
-class Test_CMB2_Options extends Test_CMB2 {
+class Test_CMB2_Options extends CMB2TestCase {
 
 	/**
 	 * Set up the test fixture
@@ -109,7 +109,7 @@ class Test_CMB2_Options extends Test_CMB2 {
 
 	public function test_cmb2_with_empty_options() {
 		$opts = cmb2_options( 'cmb_empty_option' );
-		$this->assertInternalType( 'array', $opts->get_options() );
+		$this->assertIsArray( $opts->get_options() );
 		$this->assertSame( array(), $opts->get_options() );
 	}
 
